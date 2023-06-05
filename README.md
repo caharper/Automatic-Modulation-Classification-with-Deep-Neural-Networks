@@ -4,6 +4,14 @@ The dataset can be downloaded from https://www.deepsig.ai/datasets.
 
 We use the RADIOML 2018.01A dataset.
 
+# Setup
+
+To run our cod as a package, we provide a `setup.py` file.  To run the setup, inside this directory, run:
+
+```bash
+python setup.py develop
+```
+
 # Prepare Dataset
 
 Our code assumes the data to be in TFRecord format; however, the dataset provided by DeepSig is in hdf5 format.  To convert the dataset using our train/test split, run the script `process_data.py`.  For example:
@@ -14,7 +22,13 @@ Our code assumes the data to be in TFRecord format; however, the dataset provide
 
 # Run Code
 
-The `notebooks` directory contains and example notebook on how to train a network with our configuration.  By adjusting the parameters to `create_model()`, our experiments can be recreated.
+To run all experiments using `Bocas`, run the following inside the `./experiments/radioml2018.01a/` directory:
+
+```bash
+python3 -m bocas.launch run.py --task run.py --config configs/sweep-models.py
+```
+
+The `examples` directory contains and example notebook on how to train a network with our configuration.  By adjusting the parameters to `create_model()`, our experiments can be recreated.
 
 # Citation
 
