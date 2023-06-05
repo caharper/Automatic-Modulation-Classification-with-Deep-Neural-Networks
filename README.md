@@ -1,26 +1,28 @@
-# Download Dataset
+# Automatic Modulation Classification with Deep Neural Networks
+
+## Download Dataset
 
 The dataset can be downloaded from https://www.deepsig.ai/datasets.
 
 We use the RADIOML 2018.01A dataset.
 
-# Setup
+## Setup
 
-To run our cod as a package, we provide a `setup.py` file.  To run the setup, inside this directory, run:
+To run our code as a package, we provide a `setup.py` file.  To run the setup, inside this directory, run:
 
 ```bash
 python setup.py develop
 ```
 
-# Prepare Dataset
+## Prepare Dataset
 
 Our code assumes the data to be in TFRecord format; however, the dataset provided by DeepSig is in hdf5 format.  To convert the dataset using our train/test split, run the script `process_data.py`.  For example:
 
-```
-    process_data.py --src_dataset_path="./dataset/2018.01/GOLD_XYZ_OSC.0001_1024.hdf5" --dest_dataset_path="./dataset/GOLD_XYZ_OSC_tfrecord"
+```bash
+process_data.py --src_dataset_path="./dataset/2018.01/GOLD_XYZ_OSC.0001_1024.hdf5" --dest_dataset_path="./dataset/GOLD_XYZ_OSC_tfrecord"
 ```
 
-# Run Code
+## Run Code
 
 To run all experiments using `Bocas`, run the following inside the `./experiments/radioml2018.01a/` directory:
 
@@ -29,7 +31,7 @@ python3 -m bocas.launch run.py --task run.py --config configs/sweep-models.py
 ```
 
 
-# Citation
+## Citation
 
 If you make use of this work or use our dataset split, please cite our work:
 
