@@ -28,7 +28,6 @@ To run all experiments using `Bocas`, run the following inside the `./experiment
 python3 -m bocas.launch run.py --task run.py --config configs/sweep-models.py
 ```
 
-The `examples` directory contains and example notebook on how to train a network with our configuration.  By adjusting the parameters to `create_model()`, our experiments can be recreated.
 
 # Citation
 
